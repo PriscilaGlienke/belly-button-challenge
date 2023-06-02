@@ -36,8 +36,12 @@ d3.json(url).then(data => {
     
         let barData = [barTrace];
 
+        let barLayout = {
+            title: "Top 10 OTUs",
+        }
+
         // Create the bar chart
-        Plotly.newPlot("bar", barData);
+        Plotly.newPlot("bar", barData, barLayout);
 
 
         //Define the trace for the bubble chart
