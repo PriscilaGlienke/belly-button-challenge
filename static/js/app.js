@@ -59,8 +59,12 @@ d3.json(url).then(data => {
 
         let bubbleData = [bubbleTrace];
 
+        let bubbleLayout = {
+            title: "Bubble Chart",
+ };
+
         // Create the bubble chart
-        Plotly.newPlot("bubble", bubbleData);
+        Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
         //Update the sample metadata
         let metadataDiv = d3.select("#sample-metadata");
